@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class GuessGame {
     public static void main (String[] args) {
         int val = 20;
+        int count = 0;
 
         Scanner reader = new Scanner(System.in);
 
@@ -14,11 +15,14 @@ public class GuessGame {
 
             if(foo>val) {
                 System.out.println("Too high");
+                System.out.println("Number of times correct: " + count);
             } else if (foo<val) {
                 System.out.println("Too low");
+                System.out.println("Number of times correct: " + count);
             } else if (foo==val) {
                 System.out.println("You guessed right!");
-                break;
+                count++;
+                System.out.println("Number of times correct: " + count);
             }
 
             if(n.equals("quit")) {
